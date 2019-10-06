@@ -2,23 +2,26 @@ var products = [];
 var cartItems=[];
 var cart_n = document.getElementById('cart_n');
 
-var fruitDiv = document.getElementById("fruitDIV");
+var productosDiv = document.getElementById("productosDIV");
 
-var FRUIT=[
-    {name:'Apple', price:12},
-    {name:'Orange', price:13},
-    {name:'Cherry', price:11},
-    {name:'Strawberry', price:13},
-    {name:'Kiwi', price:11},
-    {name:'Banana', price:12}
+var PRODUCTOS=[
+    {name:'Banda de frenos TOYOTA', price:120000},
+    {name:'Filtro de aire', price:130000},
+    {name:'Disco de frenos', price:111000},
+    {name:'Chip de potencia', price:13000},
+    {name:'Radiadores', price:110000},
+    {name:'Amortiguadores', price:120000},
+    {name:'Chip de potencia', price:13000},
+    {name:'Radiadores', price:110000},
+    {name:'Amortiguadores', price:120000}
 ];
 
-function HTMLfruitProduct(con){
-    let btn = `btnFruit${con}`;
+function HTMLproductosProduct(con){
+    let btn = `btnProducts${con}`;
 
     return `<div class="col-md-4">
         <div class="card mb-4 shadow-sm">
-            <img src="" class="card-img-top" style="height:16rem;"alt="card">
+            <img src="/img/Producto1.jpeg" class="card-img-top" style="height:16rem;"alt="card">
             <div class="card-body">
                 <i style="color:orange;" class="fa fa-star" ></i>
                 <i style="color:orange;" class="fa fa-star" ></i>
@@ -26,17 +29,17 @@ function HTMLfruitProduct(con){
                 <i style="color:orange;" class="fa fa-star" ></i>
                 <i style="color:orange;" class="fa fa-star" ></i>
 
-                <p class="card-text">${FRUIT[con-1].name}</p>
-                <p class="card-text">Price: ${FRUIT[con-1].price}.00</p>
+                <p class="card-text">${PRODUCTOS[con-1].name}</p>
+                <p class="card-text">Precio: ${PRODUCTOS[con-1].price}.00</p>
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <button type="button" onclick="cart2('${FRUIT[con-1].name}',
-                        '${FRUIT[con-1].price}',', '${con}','${btn}')" 
+                        <button type="button" onclick="cart2('${PRODUCTOS[con-1].name}',
+                        '${PRODUCTOS[con-1].price}',', '${con}','${btn}')" 
                         class="btn btn-sm btn-outline-secondary">
-                            <a style="color:inherit;" href="/cart">Buy</a></button>
-                            <button id="${btn}" type="button" onclick="cart('${FRUIT[con-1].name}','${FRUIT[con-1].price}','${con}','${btn}')" class="btn btn-sm btn-outline-secondary">Add to cart</button>
+                            <a style="color:inherit;" href="/cart">Comprar</a></button>
+                            <button id="${btn}" type="button" onclick="cart('${PRODUCTOS[con-1].name}','${PRODUCTOS[con-1].price}','${con}','${btn}')" class="btn btn-sm btn-outline-secondary">Agregar al carrito</button>
                     </div>
-                    <small class="text-muted">Free Shopping</small>
+                    <small class="text-muted">Producto original</small>
                 </div>
             </div>
         </div>
@@ -51,7 +54,7 @@ function animation(){
     });
     toast({
         type:'success',
-        title:'Added to shopping cart'
+        title:'Agregado al carrito'
     });
 }
 
@@ -96,8 +99,8 @@ function cart2(name,price,con,btncart){
 } 
 
 (()=>{
-    for (let index = 1; index <=6 ; index++){
-       fruitDiv.innerHTML+=`${HTMLfruitProduct(index)}`;
+    for (let index = 1; index <=9 ; index++){
+       productosDiv.innerHTML+=`${HTMLproductosProduct(index)}`;
     }
     if(localStorage.getItem("cart") ==null){
 

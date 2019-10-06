@@ -56,14 +56,14 @@ function clean() {
         <th scope="col"></th>
         <th scope="col">
         <button id="btnClean" onclick="clean()" class="btn text-white btn-warning">
-            Clean Shopping Cart
+            Limpiar carrito
         </button>
         </th>
         <th scope="col">
             <form id="form1" action="/cart" method="POST" autocomplete="off">
                 <input type="hidden" name="total" value="${total}">
                 <input type="hidden" name="_id" value="">
-                <button id="submitbtn" class="btn btn-success">Buy</button>
+                <button id="submitbtn" class="btn btn-success">Comprar</button>
             </form>
         </th>
         </tr>

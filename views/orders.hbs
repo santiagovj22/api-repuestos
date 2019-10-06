@@ -1,6 +1,6 @@
-   <nav class="navbar fixed-top navbar-dark navbar-expand-md bg-success text-white">
+   <nav class="navbar fixed-top navbar-dark navbar-expand-md bg-dark text-white">
     <a class="text-white navbar-brand" href="/">
-        <i class="fab fa-pagelines"></i>Organic store
+        <i class="fas fa-cogs"></i> Repuestos la bayadera
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto menu">
             <li class="nav-item active">
-                <a href="/admin" class="nav-link">View Orders</a>
+                <a href="/admin" class="nav-link">Ver Pedidos</a>
             </li>
         </ul>
        
@@ -21,15 +21,15 @@
             <form action="/order" class="border border-warning p-3" method="POST" autocomplete="off">
             <input type="hidden" name="_id" value="{{order.id}}">
             <div class="form-group">
-                <label for="">Order</label>
-                <input type="text" class="form-control" value="{{order.order}}" name="order" placeholder="Order">
+                <label for="">Pedido</label>
+                <input type="text" class="form-control" value="{{order.order}}" name="order" placeholder="Pedido">
             </div>
               <div class="form-group">
                 <label for="">Total</label>
                 <input type="text" class="form-control" value="{{order.total}}" name="total" placeholder="Total">
             </div>
               <div class="form-group">
-                  <button type="submit" class="btn btn-success">Submit</button>
+                  <button type="submit" class="btn btn-success">Enviar</button>
             </div>
             </form>
         </div>
