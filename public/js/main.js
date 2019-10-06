@@ -11,9 +11,9 @@ var PRODUCTOS=[
     {name:'Chip de potencia', price:13000},
     {name:'Radiadores', price:110000},
     {name:'Amortiguadores', price:120000},
-    {name:'Chip de potencia', price:13000},
-    {name:'Radiadores', price:110000},
-    {name:'Amortiguadores', price:120000}
+    {name:'Kit tunning box', price:13000},
+    {name:'Frenos', price:110000},
+    {name:'Inyectores', price:120000}
 ];
 
 function HTMLproductosProduct(con){
