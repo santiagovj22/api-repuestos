@@ -74,6 +74,7 @@ function clean() {
 
 var form = document.getElementById('form1');
 document.getElementById('submitbtn').addEventListener('click',() => {
+   
     localStorage.clear();
     setTimeout(() =>{
         Sub();
